@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Math Arrow</string>
+    <string name="action_settings">Voltar</string>
+    <string name="action_restart">Recomeçar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_about">Arrow Fraction - Sobre</string>
+    <string name="title_activity_record">Arrow Fraction - Recorde</string>
+    <string name="title_activity_help">Arrow Fraction - Ajuda</string>
+
+    <!-- Title -->
+    <string name="title_presentation_prolicen">PROLICEN 2013</string>
+    <string name="title_presentation_project">Ensinando programação de sistemas concorrentes e formas de testa tais sistemas</string>
+    <string name="title_presentation_name">Arrow Fraction</string>
+    <string name="title_activity_presentation">Presentation</string>
+    <string name="title_activity_screen_slide">ScreenSlideActivity</string>
+
+    <!-- Button -->
+    <string name="button_menu_start">Iniciar</string>
+    <string name="button_menu_presentation">Apresentação</string>
+    <string name="button_menu_help">O que é fração?</string>
+    <string name="button_menu_record">Recordes</string>
+    <string name="button_menu_level">Nível</string>
+    <string name="button_menu_exit">Sair</string>
+    <string name="text_game_pergunta">Pergunta: </string>
+    <string name="text_game_tentativa">Tentativas:</string>
+    <string name="text_help">Fração é a representação da parte de um todo (de um ou mais inteiros), assim, podemos considerá-la como sendo mais uma representação de quantidade, ou seja, uma representação numérica, com ela podemos efetuar todas as operações como: adição, subtração, multiplicação, divisão, potenciação, radiciação.
+Dessa forma, toda fração pode ser representada em uma reta numerada, por exemplo, 1/2 (um meio) significa que de um inteiro foi considerada apenas a sua metade, portanto, podemos dizer que em uma reta numerada a fração 1/2 estará entre os números inteiros 0 e 1.</string>
+    <string name="title_activity_jogo">Jogo</string>
+    <string name="title_activity_level">Arrow Fraction - Nível</string>
+    <string name="facil">Fácil</string>
+    <string name="medio">Médio</string>
+    <string name="dificio">Difícil</string>
+    <string name="confirm_answer">Confirmar Resposta</string>
+    <string name="title_activity_game">Game</string>
+    <string name="title_activity_phase">Phase</string>
+    <string name="title_activity_activity_game_arrow">ActivityGameArrow</string>
+    <string name="title_activity_opcao">Opcao</string>
+    <string name="title_activity_phases">Math Arrows</string>
+    <string name="phases_title">Selecione um Conteúdo</string>
+    <string name="title_activity_create_record">Math Arrow</string>
+    <string name="title_crate_record">Grave seu record</string>
+    <string name="create_recorde_name">Nome:</string>
+    <string name="bt_salva">Salvar</string>
+    <string name="bt_cancelar">Cancelar</string>
+    <string name="record_title">Recordes</string>
+
+</resources>

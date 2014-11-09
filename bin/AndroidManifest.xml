@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.ufpb.prolicen.arrowfraction"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/archer_happy"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.Presentation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.Opction"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.Help"
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.About"
+            android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.Record"
+            android:label="@string/title_activity_record" >
+        </activity>
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.Level"
+            android:label="@string/title_activity_level" >
+        </activity>
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.ActivityGameArrow"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.Opcao"
+            android:label="@string/title_activity_opcao" >
+        </activity>
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.Phases"
+            android:label="@string/title_activity_phases" >
+        </activity>
+        <activity
+            android:name="br.com.ufpb.prolicen.screen.CreateRecord"
+            android:label="@string/title_activity_create_record" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/b_apresentacao"
+    android:orientation="vertical"
+    tools:context=".Menu" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.22222"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:id="@+id/layout_start_003"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"            
+            android:orientation="vertical" >
+<!--             android:layout_marginLeft="24sp" -->
+<!--             android:layout_marginTop="44sp" -->
+        <ImageButton
+            android:id="@+id/bt_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:src="@drawable/menu_iniciar" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.77777"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/menu_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@android:color/transparent"
+                android:contentDescription="@null"
+                android:src="@drawable/menu_config" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:baselineAligned="false" >
+
+            <ImageButton
+                android:id="@+id/menu_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@android:color/transparent"
+                android:contentDescription="@null"
+                android:src="@drawable/menu_sair" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

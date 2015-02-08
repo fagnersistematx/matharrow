@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_record_come_back"
+        android:orderInCategory="100" 
+        android:title="@string/menu_come_back"/>
+    
+    <item
+        android:id="@+id/menu_record_delete"
+        android:orderInCategory="100"
+        android:title="@string/menu_record_delete"/>
+
+</menu>

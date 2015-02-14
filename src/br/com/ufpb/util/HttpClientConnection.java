@@ -54,6 +54,7 @@ public class HttpClientConnection {
 			bufferedReader.close();
 
 			String resultado = stringBuffer.toString();
+			Log.i("Resposta HTTP",resultado);
 			return resultado;
 		} finally {
 			if (bufferedReader != null) {

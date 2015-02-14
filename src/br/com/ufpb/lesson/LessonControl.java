@@ -57,7 +57,7 @@ public class LessonControl {
 				lesson.setName(cursor.getString(cursor.getColumnIndex("NAME")));
 				lesson.setHelp(cursor.getString(cursor.getColumnIndex("HELP")));
 				lesson.setQuestions(this.questionControl
-						.getFindQuestionLesson(lesson.getId()));
+					.getFindQuestionLesson(lesson.getId()));
 				lessons.add(lesson);
 			} while (cursor.moveToNext());
 		}

@@ -24,7 +24,7 @@ public class ActivityGameArrow extends Activity {
 	private ImageButton btHelp;
 	private RelativeLayout rl;
 	private Alert alertMensage;
-	private Lesson lesson;
+	private Lesson lesson;	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +101,10 @@ public class ActivityGameArrow extends Activity {
 
 	public void setAlertMensage(Alert alertMensage) {
 		this.alertMensage = alertMensage;
+	}
+	
+	public Lesson getLesson() {
+		return lesson;
 	}
 
 }

@@ -32,6 +32,14 @@ public class Question implements Serializable {
 		this.incorrectAnswers.add(incorrectAnswer);
 	}
 	
+	public List<String> getIncorrectAnswer(){
+		return this.incorrectAnswers;
+	}
+	
+	public void setIncorrectAnswer(List<String> incorrectAnswers){
+		this.incorrectAnswers = incorrectAnswers;
+	}
+	
 	public String getIncorrectAnswer(int index){
 		return this.incorrectAnswers.get(index);
 	}

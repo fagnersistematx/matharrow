@@ -45,6 +45,7 @@ public class UpdateDatabase {
 			try {
 				for (int i = 0; i < array.size(); i++) {
 					Lesson lesson = gson.fromJson(array.get(i), Lesson.class);
+					Log.i("Resposta L",lesson.getQuestions().get(0).toString());
 					lessons.add(lesson);
 				}
 			} catch (Exception e) {

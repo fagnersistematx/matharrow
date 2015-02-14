@@ -8,6 +8,7 @@ import br.com.ufpb.util.DatabaseConnection;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -27,10 +28,8 @@ public class Phases extends Activity {
 		
 		this.lessonControl = new LessonControl(this);	
 		
-		lessons = lessonControl.getLesson();	
-		
-		//String[] itens = { "Números inteiros" };
-		
+		lessons = lessonControl.getLesson();
+				
 		String[] itens = new String[lessons.size()];
 		
 		for(int i = 0; i < lessons.size(); ++i){
@@ -47,6 +46,8 @@ public class Phases extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int posicao,
 					long arg3) {	
 							
+				Log.i("Le", lessons.get(posicao).toString());
+				
 				Intent intent1 = new Intent(myActivity, ActivityGameArrow.class);
 				intent1.putExtra("LESSON", lessons.get(posicao));
 				startActivity(intent1);

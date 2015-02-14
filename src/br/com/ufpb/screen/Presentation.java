@@ -10,7 +10,7 @@ public class Presentation extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_presentation);
+		setContentView(R.layout.activity_presentation);			
 		
 		//Thread myGame = new Thread(new StandartLesson(this));
 		//myGame.start();

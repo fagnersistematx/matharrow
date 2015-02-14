@@ -3,9 +3,9 @@ package br.com.ufpb.game;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import br.com.ufpb.lesson.Lesson;
 import br.com.ufpb.matharrow.R;
 import br.com.ufpb.question.Question;
-import br.com.ufpb.question.QuestionsControl;
 import br.com.ufpb.screen.ActivityGameArrow;
 import br.com.ufpb.screen.CreateRecord;
 import br.com.ufpb.util.Alert;
@@ -13,7 +13,7 @@ import br.com.ufpb.util.Alert;
 public class Control {
 
 	private Question question;
-	private QuestionsControl questionsControl;
+	private Lesson lesson;
 	private float gameScore;
 	private int attempts;
 	private int indexQuestion;
@@ -23,10 +23,10 @@ public class Control {
 	private int soundIDcollision;
 
 	public Control(ActivityGameArrow activity) {
-		this.questionsControl = QuestionsControl.getInstance();
+		this.lesson = activity.getLesson(); 
 		this.activity = activity;
 		this.generatQuestion();
-		this.attempts = 10;// getInitialAttempts();
+		this.attempts = 10;
 		this.gameScore = 0;
 		loadSound();
 	}
@@ -38,19 +38,9 @@ public class Control {
 		this.soundIDcollision = sound.load(activity, R.raw.collision, 1);
 	}
 
-	// private int getInitialAttempts() {
-	// if (level == 2) {
-	// return (int) (question.getAnswer() + ATTEMPTS_DIFFICULT);
-	// } else if (level == 1) {
-	// return (int) (question.getAnswer() + ATTEMPTS_AVERAGE);
-	// } else {
-	// return (int) (question.getAnswer() + ATTEMPTS_EASY);
-	// }
-	// }
-
 	private void generatQuestion() {
 		try {
-			question = questionsControl.getQuestion(indexQuestion);
+			question = lesson.getQuestions().get(indexQuestion);
 			++indexQuestion;
 		} catch (Exception e) {			
 			activity.runOnUiThread((new Alert(activity, "Parabéns.",

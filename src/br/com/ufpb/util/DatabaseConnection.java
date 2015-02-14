@@ -7,7 +7,7 @@ import android.util.Log;
 
 public class DatabaseConnection {
 
-	private static final String DATABASE_NAME = "banco_arrow003.db";
+	private static final String DATABASE_NAME = "banco_arrow024.db";
 	private static final int DATABASE_VERSION = 1;
 	private static SQLiteDatabase db;
 	private static OpenHelper openHelper;
@@ -35,6 +35,9 @@ public class DatabaseConnection {
 			
 			db.execSQL("CREATE TABLE LESSON(ID INTEGER PRIMARY KEY, "
 					+ "NAME TEXT NOT NULL, HELP TEXT )");
+			
+			db.execSQL("CREATE TABLE ANSWERRR(QUESTION_ID INTEGER NOT NULL, "
+					+ "ANSWER_I TEXT NOT NULL )");
 			
 			db.execSQL("CREATE TABLE QUESTION(ID INTEGER PRIMARY KEY, "
 					+ "ACTIVITY_ID INTEGER NOT NULL, QUESTION TEXT NOT NULL, ANSWER TEXT NOT NULL )");

@@ -6,18 +6,21 @@ import java.util.List;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;
+import android.util.Log;
 import br.com.ufpb.util.DatabaseConnection;
 
 public class QuestionC {
 
 	private SQLiteStatement statement;
-	private static final String INSERT = "INSERT INTO QUESTION (ID, ACTIVITY_ID, QUESTION, ANSWER) values (?, ?, ?, ?)";
+	private AnswerControl answerControl;
+	private static final String INSERT = "INSERT INTO QUESTION (ID, ACTIVITY_ID, QUESTION, ANSWER) values (?, ?, ?, ?)";	
 	private static final String UPDATE = "UPDATE LESSON SET QUESTION = ? , ANSWER = ? WHERE ID = ?";
 	private static final String DELETE = "DELETE FROM QUESTION WHERE ID = ?";
 	private static final String DELETE_LESSON = "DELETE FROM QUESTION WHERE ACTIVITY_ID = ?";
 
 	public QuestionC(Context context) {
 		DatabaseConnection.getInstance(context);
+		answerControl = new AnswerControl(context);
 	}
 
 	public void addQuestion(Question question) throws QuestionException {
@@ -27,7 +30,15 @@ public class QuestionC {
 		this.statement.bindString(3, question.getQuestion());
 		this.statement.bindString(4, question.getAnswer());
 		this.statement.executeInsert();
+		addIncorrectAnswers(question);
 	}
+
+	private void addIncorrectAnswers(Question question) {
+		for (String answer : question.getIncorrectAnswer()) {
+			Log.i("QuestionC - addI", answer);
+			answerControl.addAnswer(question, answer);
+		}		
+	}	
 
 	public void updateQuestion(Question question) {
 		this.statement = DatabaseConnection.getDb().compileStatement(UPDATE);
@@ -72,6 +83,9 @@ public class QuestionC {
 						.getColumnIndex("QUESTION")));
 				question.setAnswer(cursor.getString(cursor
 						.getColumnIndex("ANSWER")));
+				
+				question.setIncorrectAnswer(answerControl.getFindAnswerQuestion(question.getId()));
+				
 				questions.add(question);
 			} while (cursor.moveToNext());
 		}
@@ -98,6 +112,9 @@ public class QuestionC {
 						.getColumnIndex("QUESTION")));
 				question.setAnswer(cursor.getString(cursor
 						.getColumnIndex("ANSWER")));
+				
+				question.setIncorrectAnswer(answerControl.getFindAnswerQuestion(question.getId()));
+				
 				questions.add(question);
 			} while (cursor.moveToNext());
 		}
@@ -123,6 +140,8 @@ public class QuestionC {
 						.getColumnIndex("QUESTION")));
 				question.setAnswer(cursor.getString(cursor
 						.getColumnIndex("ANSWER")));
+				
+				question.setIncorrectAnswer(answerControl.getFindAnswerQuestion(question.getId()));
 
 				cursor.close();
 
@@ -130,7 +149,6 @@ public class QuestionC {
 			} while (cursor.moveToNext());
 		}
 		return question;
-
-	}
+	}	
 
 }

@@ -6,7 +6,6 @@ import java.util.List;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;
-import android.util.Log;
 import br.com.ufpb.util.DatabaseConnection;
 
 public class AnswerControl {
@@ -33,11 +32,9 @@ public class AnswerControl {
 				"QUESTION_ID = ?", new String[] { "" + id }, null, null, "ANSWER_I");
 		
 		if (cursor.moveToFirst()) {
-			Log.i("Criado Lista E", "Entrou 2");
 			do {				
 				answers.add(cursor.getString(cursor
 						.getColumnIndex("ANSWER_I")));
-				Log.i("Criado Lista", answers.toString());
 			} while (cursor.moveToNext());
 		}
 		if (cursor != null && !cursor.isClosed()) {

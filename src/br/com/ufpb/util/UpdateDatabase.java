@@ -11,6 +11,7 @@ import br.com.ufpb.lesson.Lesson;
 import br.com.ufpb.lesson.LessonControl;
 import br.com.ufpb.lesson.LessonException;
 import br.com.ufpb.question.QuestionException;
+import br.com.ufpb.servico.HttpClientConnection;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;

@@ -27,7 +27,11 @@ public class StandartLesson implements Runnable {
 				lesson = new Lesson();
 				lesson.setId(1);
 				lesson.setName("Números Inteiros");
-				lesson.setHelp("Os números inteiros são constituídos dos números naturais.");
+				lesson.setHelp("Os números inteiros são os números reais, " +
+						"positivos e negativos, representados no conjunto da seguinte maneira: Z={..., -3, -2, -1, 0, 1, 2, 3,...}; " +
+						"onde os pontos significam a infinidade dos números anteriores e posteriores existentes. Importante lembrar que " +
+						"nas operações matemáticas de adição, multiplicação e subtração (exceto a divisão), " +
+						"o resultado da soma, do produto e da diferença de dois números inteiros será sempre outro número inteiro.");
 				lesson.setQuestions(new ArrayList<Question>());
 				bearsQuestions();
 				lessonControl.addLesson(lesson);

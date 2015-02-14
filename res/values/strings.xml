@@ -6,7 +6,7 @@
     <string name="menu_record_delete">Deletar Recordes</string>
     <string name="action_restart">Recomeçar</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_about">Math Arrow - Sobre</string>
+    <string name="title_activity_about">O Math Arrow é um jogo que contém perguntas sobre um determinado conteúdo matemático. O jogador deve respondê-las acertando uma das maçãs que caem aleatoriamente com a opção correta. Para acertar a maçã o jogador deve pressionar sobre o arqueiro para que então ele atire uma flecha sobre a maçã com a resposta desejada acumulando então uma pontuação que é baseada no número de tentativas. Caso o arqueiro acerte com a flecha em uma maçã que contenha uma resposta incorreta, aparecerá na tela uma mensagem que avisa que a resposta está incorreta e assim encerra o jogo direcionando então para uma tela de registro. Nesta tela aparecerá a pontuação acumulada na partida e um campo para o jogador digitar seu nome Clicando no botão salvar, o recorde do jogador ficará salvo na memória do jogo para que se possa acompanhar o desempenho em cada partida.</string>
     <string name="title_activity_record">Math Arrow - Recorde</string>
     <string name="title_activity_help">Math Arrow - Ajuda</string>
 

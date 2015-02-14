@@ -6,20 +6,20 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;
 import br.com.ufpb.question.Question;
-import br.com.ufpb.question.QuestionC;
+import br.com.ufpb.question.QuestionControl;
 import br.com.ufpb.question.QuestionException;
 import br.com.ufpb.util.DatabaseConnection;
 
 public class LessonControl {
 
 	private SQLiteStatement statement;
-	private QuestionC questionControl;
+	private QuestionControl questionControl;
 	private static final String INSERT = "INSERT INTO LESSON (ID, NAME, HELP) values (?, ?, ?)";
 	private static final String UPDATE = "UPDATE LESSON SET NAME = ? , HELP = ? where id = ?";
 
 	public LessonControl(Context context) {
 		DatabaseConnection.getInstance(context);
-		this.questionControl = new QuestionC(context);
+		this.questionControl = new QuestionControl(context);
 	}
 
 	public void addLesson(Lesson lesson) throws LessonException,

@@ -7,7 +7,7 @@ import android.util.Log;
 
 public class DatabaseConnection {
 
-	private static final String DATABASE_NAME = "banco_arrow024.db";
+	private static final String DATABASE_NAME = "banco_math_arrow001.db";
 	private static final int DATABASE_VERSION = 1;
 	private static SQLiteDatabase db;
 	private static OpenHelper openHelper;

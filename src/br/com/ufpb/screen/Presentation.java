@@ -12,8 +12,8 @@ public class Presentation extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_presentation);			
 		
-		//Thread myGame = new Thread(new StandartLesson(this));
-		//myGame.start();
+		Thread myGame = new Thread(new StandartLesson(this));
+		myGame.start();
 		
 		new Thread(){
 			@Override

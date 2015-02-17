@@ -33,7 +33,7 @@
     <string name="title_activity_phases">Math Arrow</string>
     <string name="title_activity_create_record">Math Arrow</string>  
     <string name="title_crate_record">Grave seu record</string>
-    <string name="phases_title">Selecione um Conteúdo</string>
+    <string name="phases_title">Selecione uma Atividade</string>
     <string name="create_recorde_name">Nome:</string>
     <string name="bt_salva">Salvar</string>
     <string name="bt_cancelar">Cancelar</string>

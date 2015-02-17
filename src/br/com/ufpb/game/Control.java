@@ -1,7 +1,7 @@
 package br.com.ufpb.game;
 
 import android.content.Intent;
-import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import br.com.ufpb.lesson.Lesson;
 import br.com.ufpb.matharrow.R;
@@ -19,8 +19,8 @@ public class Control {
 	private int indexQuestion;
 	private ActivityGameArrow activity;
 	private SoundPool sound;
-	private int soundIDtiro;
-	private int soundIDcollision;
+	private MediaPlayer soundArrow;
+	private MediaPlayer soundCollision;
 
 	public Control(ActivityGameArrow activity) {
 		this.lesson = activity.getLesson(); 
@@ -31,11 +31,9 @@ public class Control {
 		loadSound();
 	}
 
-	@SuppressWarnings("deprecation")
-	private void loadSound() {
-		this.sound = new SoundPool(4, AudioManager.STREAM_MUSIC, 0);
-		this.soundIDtiro = sound.load(activity, R.raw.arrow, 1);
-		this.soundIDcollision = sound.load(activity, R.raw.collision, 1);
+	private void loadSound() {		
+		soundArrow = MediaPlayer.create(activity, R.raw.arrow);
+		soundCollision = MediaPlayer.create(activity, R.raw.collision);		
 	}
 
 	private void generatQuestion() {
@@ -75,12 +73,12 @@ public class Control {
 	}
 
 	public void playSoundArrow() {
-		int streamIDtiro = sound.play(soundIDtiro, 1f, 1f, 0, 0, 1f);
+		soundArrow.start();
 	}
 	
 	
 	public void playSoundCollision() {
-		int streamIDCollision = sound.play(soundIDcollision, 1f, 1f, 0, 0, 1f);
+		soundCollision.start();
 	}
 
 	public void decrementAttempts() {

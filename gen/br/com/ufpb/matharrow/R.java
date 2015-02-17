@@ -35,22 +35,21 @@ public final class R {
         public static final int b_configuracao=0x7f020007;
         public static final int bg_game=0x7f020008;
         public static final int bt_start=0x7f020009;
-        public static final int c1=0x7f02000a;
-        public static final int c2=0x7f02000b;
-        public static final int help=0x7f02000c;
-        public static final int ic_archer=0x7f02000d;
-        public static final int ic_launcher=0x7f02000e;
-        public static final int logo=0x7f02000f;
-        public static final int maca=0x7f020010;
-        public static final int menu_apresentacao=0x7f020011;
-        public static final int menu_config=0x7f020012;
-        public static final int menu_configuracao=0x7f020013;
-        public static final int menu_iniciar=0x7f020014;
-        public static final int menu_records=0x7f020015;
-        public static final int menu_sair=0x7f020016;
-        public static final int menu_start=0x7f020017;
-        public static final int menus=0x7f020018;
-        public static final int seta=0x7f020019;
+        public static final int content=0x7f02000a;
+        public static final int help=0x7f02000b;
+        public static final int ic_archer=0x7f02000c;
+        public static final int ic_launcher=0x7f02000d;
+        public static final int logo=0x7f02000e;
+        public static final int maca=0x7f02000f;
+        public static final int menu_apresentacao=0x7f020010;
+        public static final int menu_config=0x7f020011;
+        public static final int menu_configuracao=0x7f020012;
+        public static final int menu_iniciar=0x7f020013;
+        public static final int menu_records=0x7f020014;
+        public static final int menu_sair=0x7f020015;
+        public static final int menu_start=0x7f020016;
+        public static final int menus=0x7f020017;
+        public static final int seta=0x7f020018;
     }
     public static final class id {
         public static final int about=0x7f0a000f;
@@ -113,7 +112,8 @@ public final class R {
     }
     public static final class raw {
         public static final int arrow=0x7f040000;
-        public static final int collision=0x7f040001;
+        public static final int background_sound=0x7f040001;
+        public static final int collision=0x7f040002;
     }
     public static final class string {
         public static final int action_restart=0x7f070003;

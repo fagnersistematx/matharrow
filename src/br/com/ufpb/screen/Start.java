@@ -3,6 +3,7 @@ package br.com.ufpb.screen;
 import br.com.ufpb.matharrow.R;
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,15 +13,19 @@ public class Start extends Activity {
 	private ImageButton menuConfig;
 	private ImageButton menuExit;
 	private ImageButton btStart;
+	private MediaPlayer backgroundSound;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_start);
+		setContentView(R.layout.activity_start);	
 		
 		menuConfig = (ImageButton) findViewById(R.id.menu_config);
 		menuExit = (ImageButton) findViewById(R.id.menu_exit);
 		btStart = (ImageButton) findViewById(R.id.bt_start);
+		
+		backgroundSound = MediaPlayer.create(this, R.raw.background_sound);
+		backgroundSound.start();		
 		
 		btStart.setOnClickListener(new View.OnClickListener() {
 

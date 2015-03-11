@@ -25,7 +25,8 @@ public class Apple extends GameObject {
 	}
 
 	public void draw(Canvas canvas, Paint paint) {
-		paint.setColor(Color.RED);
+		paint.setColor(Color.WHITE);
+		paint.setTextSize(20);
 		canvas.drawBitmap(getBitmap(), getX(), getY(), paint);
 		//DecimalFormat df = new DecimalFormat("0.00"); 
 		canvas.drawText(resposta, getX(), getY(), paint);
